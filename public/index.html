@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>herdr</title>
+    <link rel="stylesheet" href="/vendor/xterm/xterm.css" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main id="terminal" aria-label="Herdr terminal"></main>
+    <section id="connection" class="connection" role="status" aria-live="polite">
+      <p id="connection-message">Connecting to Herdr…</p>
+      <button id="retry" type="button" hidden>Retry connection</button>
+    </section>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

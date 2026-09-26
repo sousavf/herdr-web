@@ -1,0 +1,31 @@
+{
+  "name": "herdr-web",
+  "version": "0.1.0",
+  "description": "The native Herdr terminal interface in a local browser tab.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Vasco Sousa",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "herdr-web": "src/server.js"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "postinstall": "node tools/ensure-node-pty-helper.mjs",
+    "test": "node --test test/*.test.js",
+    "check": "node --check src/server.js && node --check src/terminal-session.js && node --check src/content-types.js && node --check public/app.js",
+    "smoke": "node tools/ui-smoke.mjs"
+  },
+  "keywords": [
+    "herdr",
+    "browser",
+    "terminal",
+    "coding-agents"
+  ],
+  "dependencies": {
+    "node-pty": "1.1.0",
+    "ws": "8.21.3"
+  }
+}

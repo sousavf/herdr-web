@@ -1,0 +1,78 @@
+:root {
+  color-scheme: dark;
+  font-family: "SF Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  background: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+html,
+body,
+#terminal {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+#terminal {
+  position: relative;
+  overflow: hidden;
+}
+
+#terminal .xterm {
+  height: 100%;
+}
+
+.connection {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: calc(100vw - 2rem);
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #777;
+  border-radius: 0.4rem;
+  background: #171717;
+  color: #fff;
+  font: 0.85rem system-ui, sans-serif;
+  box-shadow: 0 2px 12px #0009;
+}
+
+.connection p {
+  margin: 0;
+}
+
+.connection button {
+  flex: none;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid #aaa;
+  border-radius: 0.25rem;
+  background: #333;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.connection button:hover {
+  background: #444;
+}
+
+.connection button:focus-visible,
+#terminal:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
